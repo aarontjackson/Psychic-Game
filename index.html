@@ -42,7 +42,7 @@
 
         updateDisplay();
 
-        // create a function to generate a random letter for the computer guess
+        // create a function to generate a random letter form the computerChoice array.
         function computerRandomLetter() {
             computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
         }
@@ -64,15 +64,19 @@
 
             console.log(userGuess);
 
-            if (userGuess == computerGuess);
+            if (userGuess === computerGuess){
+                wins++;
+                document.querySelector("#wins").innerHTML = ("Wins: " + wins);
+            }                
 
-            else
+            else if (userGuess === 0){
+                losses++;
+                document.querySelector("#losses").innerHTML = ("Losses: " + losses);
+            }
 
-            if (userGuess = 0);
 
 
 
-            
 
             updateDisplay();
         }
