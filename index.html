@@ -20,7 +20,6 @@
     <script>
 
         // create variables to store my values. Wins, Losses, userGuess, computerGuess, computerChoices
-
         var wins = 0;
         var losses = 0;
         var guessLeft = 9;
@@ -60,27 +59,25 @@
 
         document.onkeyup = function(event) {
 
-            userGuess = event.key;
-
+            userGuess = (event.key).toLowerCase();
             console.log(userGuess);
+            guessSoFar.push(userGuess);
 
             if (userGuess === computerGuess){
                 wins++;
                 document.querySelector("#wins").innerHTML = ("Wins: " + wins);
+                resetScores();
             }                
 
             else if (userGuess === 0){
                 losses++;
                 document.querySelector("#losses").innerHTML = ("Losses: " + losses);
+                resetScores();
             }
 
-
-
-
-
             updateDisplay();
-        }
-        //lowecase
+        };
+       
 
     </script>
 
