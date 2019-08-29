@@ -59,20 +59,28 @@
 
         document.onkeyup = function(event) {
 
-            userGuess = (event.key).toLowerCase();
+            userGuess = (event.key);
             console.log(userGuess);
             guessSoFar.push(userGuess);
+            userGuess = event.key.toLowerCase();
 
             if (userGuess === computerGuess){
                 wins++;
-                document.querySelector("#wins").innerHTML = ("Wins: " + wins);
-                resetScores();
-            }                
+                guessLeft = 9;
+                guessSoFar = [];
+                computerRandomLetter();
+                document.querySelector("#wins").innerHTML = wins;
+            }  
+            
+            if (userGuess != computerGuess){
+                guessLeft--;
+            }
 
-            else if (userGuess === 0){
+            if (guessLeft == 0){
                 losses++;
-                document.querySelector("#losses").innerHTML = ("Losses: " + losses);
-                resetScores();
+                guessSoFar = [];
+                guessLeft = 9;
+                document.querySelector("#guessLeft").innerHTML = guessLeft;
             }
 
             updateDisplay();
