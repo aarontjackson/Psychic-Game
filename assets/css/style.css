@@ -4,7 +4,7 @@ p{
 
 body {
     text-align: center;
-    background-color: brown;
+    background-color: gray;
     color: white;
     font-weight: bolder;
 }
@@ -12,17 +12,30 @@ body {
 h1{
     text-align: center;
     font-family: 'Lexend Deca', sans-serif;
-    font-size: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    
 }
 
 h2 {
     transform: rotate(-10deg);
     font-family: 'Bubblegum Sans', cursive;
-    font-size: 40px;
+    font-size: 60px;
+    text-shadow:
+
+    -3px -3px 0 #2eb8b8,
+    3px -3px 0 #2eb8b8,
+    -3px 3px 0 #2eb8b8,
+    3px 3px 0 #2eb8b8;
 }
 
 .container {
     background-image: url("../images/question.png");
     max-width: 100%;
     padding: 6em;
+}
+
+hr {
+    border-bottom: solid 3px;
+    margin: 0;
 }
