@@ -15,7 +15,7 @@ The following were used to create this application:
     * Font Awesome
     
 ## **Trial**
-----------------
+
 A link to test the game is provided below:
 
 https://aarontjackson.github.io/Psychic-Game
